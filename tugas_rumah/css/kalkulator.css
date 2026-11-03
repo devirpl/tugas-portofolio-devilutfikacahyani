@@ -1,0 +1,128 @@
+/* ===== GANTI WARNA DI SINI SAJA ===== */
+.kalkulator {
+  --pink: #e8639a;          /* tombol dan fokus input */
+  --pink-gelap: #cf4a82;    /* tombol saat disorot */
+  --biru: #a5d8ff;          /* biru pastel (garis atas) */
+  --teks: #46507a;          /* judul, label, dan teks hasil */
+  --kotak: #ffffff;         /* latar kotak kalkulator */
+  --hasil: #fdeaf3;         /* latar kotak hasil */
+}
+
+/* Latar halaman: gradasi pink ke biru pastel */
+body {
+  background: linear-gradient(160deg, #ffe3ef 0%, #e6f3ff 55%, #dff1ff 100%);
+  min-height: 100vh;
+}
+
+/* ===== KOTAK KALKULATOR ===== */
+.kalkulator {
+  position: relative;
+  overflow: hidden;
+  width: calc(100% - 40px);
+  max-width: 380px;
+  margin: 40px auto;
+  background: var(--kotak);
+  padding: 34px 28px 28px;
+  border-radius: 24px;
+  border: 1px solid #f6d9e6;
+  box-shadow: 0 18px 40px rgba(232, 99, 154, 0.18);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Garis gradasi pink ke biru di atas kotak */
+.kalkulator::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 7px;
+  background: linear-gradient(90deg, #f7a8c8, var(--biru));
+}
+
+.kalkulator h1 {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 8px;
+  color: var(--teks);
+}
+
+.kalkulator label {
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--teks);
+}
+
+/* ===== INPUT ===== */
+.kalkulator input {
+  width: 100%;
+  padding: 10px 14px;
+  border: 2px solid #e3ecf8;
+  border-radius: 12px;
+  background: #fbfdff;
+  font-size: 15px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+/* Saat kolom diklik */
+.kalkulator input:focus {
+  outline: none;
+  border-color: var(--pink);
+  box-shadow: 0 0 0 4px rgba(232, 99, 154, 0.18);
+}
+
+/* ===== TOMBOL ===== */
+.kalkulator button {
+  margin-top: 8px;
+  padding: 12px;
+  background: var(--pink);
+  color: #ffffff;
+  border: none;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+}
+
+.kalkulator button:hover {
+  background: var(--pink-gelap);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(232, 99, 154, 0.4);
+}
+
+.kalkulator button:active {
+  transform: scale(0.97);
+}
+
+/* ===== KOTAK HASIL ===== */
+#hasil {
+  margin-top: 8px;
+  padding: 14px;
+  background: var(--hasil);
+  border: 1px dashed #f3a9c8;
+  border-radius: 12px;
+  text-align: center;
+  font-weight: 600;
+  color: var(--teks);
+}
+
+/* Sembunyikan kotak hasil selama masih kosong */
+#hasil:empty {
+  display: none;
+}
+
+/* ===== LINK KEMBALI ===== */
+.kembali {
+  margin-top: 12px;
+  text-align: center;
+  font-size: 14px;
+  text-decoration: none;
+  color: var(--teks);
+}
+
+.kembali:hover {
+  text-decoration: underline;
+}
