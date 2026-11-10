@@ -21,16 +21,22 @@ if (daftarSkill) {
 // 2. Tema gelap (semua halaman)
 const tombolTema = document.querySelector("#tombol-tema");
 
+if (localStorage.getItem("tema") === "gelap") {
+  document.body.classList.add("gelap");
+  tombolTema.textContent = "Mode Terang";
+}
+
 tombolTema.addEventListener("click", () => {
   document.body.classList.toggle("gelap");
 
   if (document.body.classList.contains("gelap")) {
     tombolTema.textContent = "Mode Terang";
+    localStorage.setItem("tema", "gelap");
   } else {
     tombolTema.textContent = "Mode Gelap";
+    localStorage.setItem("tema", "terang");
   }
 });
-
 // 3. Penghitung karakter pesan (halaman Kontak)
 const kotakPesan = document.querySelector("#pesan");
 const hitungKarakter = document.querySelector("#hitung-karakter");
@@ -108,7 +114,12 @@ function tampilkanProyek(daftar) {
 
 function pasangFilter(idTombol, kategori) {
   const tombol = document.querySelector(idTombol);
+
   tombol.addEventListener("click", () => {
+    const tombolAktif = document.querySelector(".tombol-filter.aktif");
+    tombolAktif.classList.remove("aktif");
+    tombol.classList.add("aktif");
+
     if (kategori === "Semua") {
       tampilkanProyek(proyek);
     } else {
@@ -120,5 +131,7 @@ function pasangFilter(idTombol, kategori) {
 if (daftarProyek) {
   tampilkanProyek(proyek);
   pasangFilter("#filter-semua", "Semua");
+  pasangFilter("#filter-html", "HTML");
+  pasangFilter("#filter-css", "CSS");
   pasangFilter("#filter-javascript", "JavaScript");
 }

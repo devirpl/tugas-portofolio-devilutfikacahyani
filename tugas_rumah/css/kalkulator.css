@@ -1,11 +1,17 @@
 /* ===== GANTI WARNA DI SINI SAJA ===== */
 .kalkulator {
-  --pink: #e8639a;          /* tombol dan fokus input */
-  --pink-gelap: #cf4a82;    /* tombol saat disorot */
-  --biru: #a5d8ff;          /* biru pastel (garis atas) */
-  --teks: #46507a;          /* judul, label, dan teks hasil */
-  --kotak: #ffffff;         /* latar kotak kalkulator */
-  --hasil: #fdeaf3;         /* latar kotak hasil */
+  --pink: #e8639a;
+  /* tombol dan fokus input */
+  --pink-gelap: #cf4a82;
+  /* tombol saat disorot */
+  --biru: #a5d8ff;
+  /* biru pastel (garis atas) */
+  --teks: #46507a;
+  /* judul, label, dan teks hasil */
+  --kotak: #ffffff;
+  /* latar kotak kalkulator */
+  --hasil: #fdeaf3;
+  /* latar kotak hasil */
 }
 
 /* Latar halaman: gradasi pink ke biru pastel */

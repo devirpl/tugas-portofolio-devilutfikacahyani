@@ -25,6 +25,7 @@ img {
   --warna-kartu: #FFFFFF;
   --warna-garis: #DDDDDD;
 }
+
 body {
   font-family: "Inter", Arial, sans-serif;
   font-size: 1rem;
@@ -33,7 +34,9 @@ body {
   background-color: var(--warna-latar);
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-family: "Poppins", Arial, sans-serif;
   color: var(--warna-judul);
   line-height: 1.3;
@@ -43,7 +46,9 @@ h2 {
   margin-bottom: 0.75rem;
 }
 
-p, ul, ol {
+p,
+ul,
+ol {
   margin-bottom: 1rem;
 }
 
@@ -182,7 +187,8 @@ caption {
   margin-bottom: 0.5rem;
 }
 
-th, td {
+th,
+td {
   border: 1px solid var(--warna-garis);
   padding: 0.5rem 0.75rem;
   text-align: left;
@@ -198,7 +204,9 @@ label {
   font-weight: 600;
 }
 
-input, select, textarea {
+input,
+select,
+textarea {
   width: 100%;
   max-width: 22rem;
   padding: 0.6rem;
@@ -208,12 +216,13 @@ input, select, textarea {
   font-family: inherit;
   font-size: 1rem;
   background-color: var(--warna-kartu);
-color: var(--warna-teks);
+  color: var(--warna-teks);
 }
 
 .keterangan {
   font-size: 0.875rem;
 }
+
 button {
   padding: 0.75rem 1.5rem;
   border: none;
@@ -294,11 +303,10 @@ footer a {
   margin-bottom: 1rem;
 }
 
-.tombol-filter {
-  padding: 0.5rem 1rem;
-  border: 2px solid var(--warna-garis);
-  background-color: var(--warna-kartu);
-  color: var(--warna-judul);
+.tombol-filter.aktif {
+  background-color: var(--warna-aksen);
+  border-color: var(--warna-aksen);
+  color: #FFFFFF;
 }
 
 .label {
