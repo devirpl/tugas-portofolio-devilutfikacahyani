@@ -303,6 +303,13 @@ footer a {
   margin-bottom: 1rem;
 }
 
+.tombol-filter {
+  padding: 0.5rem 1rem;
+  border: 2px solid var(--warna-garis);
+  background-color: var(--warna-kartu);
+  color: var(--warna-judul);
+}
+
 .tombol-filter.aktif {
   background-color: var(--warna-aksen);
   border-color: var(--warna-aksen);
