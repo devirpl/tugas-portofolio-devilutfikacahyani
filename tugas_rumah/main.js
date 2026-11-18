@@ -16,9 +16,10 @@ async function muatKeahlian() {
       daftarSkill.appendChild(item);
     });
     jumlahSkill.textContent = `Ada ${skills.length} keahlian yang sedang saya kembangkan.`;
-  } catch (error) {
+  }catch (error) {
     jumlahSkill.textContent = "Daftar keahlian gagal dimuat.";
     console.error(error);
+    tambahSkillBaru.textContent = `Keahlian baru`;
   }
 }
 
